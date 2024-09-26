@@ -2,7 +2,8 @@
 
 # Podman
 ActiveMQ Classic
-```podman run --detach --name activemq-classic -p 61616:61616 -p 8161:8161 --rm apache/activemq-classic:5.17.6
+```
+podman run --detach --name activemq-classic -p 61616:61616 -p 8161:8161 --rm apache/activemq-classic:5.17.6
 ```
 ActiveMQ Artemis
 ```
