@@ -11,9 +11,18 @@ podman run --detach --name activemq-artemis -p 61616:61616 -p 8161:8161 --rm apa
 ```
 
 # OpenShift
-
+ActiveMQ Classic
+```
+oc new-app activemq-classic.yaml
+```
+ActiveMQ Artemis
+```
+oc new-app activemq-artemis.yaml
+```
 
 # Troubleshooting
-```curl -u admin:admin -H origin:localhost http://localhost:8161/api/jolokia/read/org.apache.activemq:type=Broker,brokerName=localhost,service=Health/CurrentStatus | grep Good```
+```
+curl -u admin:admin -H origin:localhost http://localhost:8161/api/jolokia/read/org.apache.activemq:type=Broker,brokerName=localhost,service=Health/CurrentStatus | grep Good
+```
 
 
