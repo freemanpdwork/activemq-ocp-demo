@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: activemq-classic-pod
+  name: activemq-classic-pod
+spec:
+  containers:
+  - args:
+    - activemq
+    - console
+    image: docker.io/apache/activemq-classic:5.17.6
+    name: activemq-classic
+    ports:
+    - containerPort: 8161
+      hostPort: 8161
+    - containerPort: 61616
+      hostPort: 61616
